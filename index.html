@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="styleCSS/style.css">
+    <link rel="icon" type="image/png" href="site-icon/siteIcon.png"/>
+    <title>Bank</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bank-display">
+            <div class="add-in-bank">
+                <span class="material-symbols-outlined currency">
+                    monetization_on
+                </span> 
+                <input id="value" type="text" placeholder="Adicionar" disabled>
+                <button id="safe-button" onclick="addValue()">
+                    <span class="material-symbols-outlined">
+                        savings
+                    </span>
+                </button>
+            </div>
+        </div>
+        <div class="listItems">
+            <div class="card">
+                <div class="display-card" data-tilt data-tilt-axis="x">
+                    <div class="circles">
+                        <div class="circle"></div> <!-- DIV VAZIA É UMA MÁ PRÁTICA! O MAIS CERTO A SE FAZER, EU ACHO, É FAZER COM SVG, PORÉM !AINDA! NÃO TENHO ESSA HABILIDADE -->
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <img src="https://picsum.photos/150?" alt="random_image" id="img0" crossorigin="">
+                    <div class="text-area">
+                        <h2 id="title0">Title</h2>
+                        <h5>
+                            <span class="material-symbols-outlined coin" id="coin-card0">
+                                monetization_on
+                            </span>
+                            <span id="price0">
+                                50
+                            </span> 
+                        </h5>
+                    </div>
+                </div>
+                <div class="buy">
+                    <button onclick="buyCard(0)">
+                        Comprar
+                        <span class="material-symbols-outlined sell-icon">
+                            sell
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="display-card" data-tilt data-tilt-axis="x">
+                    <div class="circles">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <img src="https://picsum.photos/150" alt="random_image" id="img1" crossorigin="">
+                    <div class="text-area">
+                        <h2 id="title1">Caflop</h2>
+                        <h5>
+                            <span class="material-symbols-outlined coin" id="coin-card1">
+                                monetization_on
+                            </span> 
+                            <span id="price1">
+                                15
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="buy">
+                    <button onclick="buyCard(1)">
+                        Comprar
+                        <span class="material-symbols-outlined sell-icon">
+                            sell
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="display-card" data-tilt data-tilt-axis="x">
+                    <div class="circles">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <img src="https://picsum.photos/150?01" alt="random_image" id="img2" crossorigin="">
+                    <div class="text-area">
+                        <h2 id="title2">Janela</h2>
+                        <h5>
+                            <span class="material-symbols-outlined coin" id="coin-card2">
+                                monetization_on
+                            </span> 
+                            <span id="price2">
+                                14
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="buy">
+                    <button onclick="buyCard(2)">
+                        Comprar
+                        <span class="material-symbols-outlined sell-icon">
+                            sell
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="display-card" data-tilt data-tilt-axis="x">
+                    <div class="circles">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <img src="https://picsum.photos/150?21" alt="random_image" id="img3" crossorigin="">
+                    <div class="text-area">
+                        <h2 id="title3">Polar</h2>
+                        <h5>
+                            <span class="material-symbols-outlined coin" id="coin-card3">
+                                monetization_on
+                            </span>
+                            <span id="price3">
+                                78
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="buy">
+                    <button onclick="buyCard(3)">
+                        Comprar
+                        <span class="material-symbols-outlined sell-icon">
+                            sell
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="card">
+                <div class="display-card" data-tilt data-tilt-axis="x">
+                    <div class="circles">
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                        <div class="circle"></div>
+                    </div>
+                    <img src="https://picsum.photos/150?1" alt="random_image" id="img4" crossorigin="">
+                    <div class="text-area">
+                        <h2 id="title4">Indice</h2>
+                        <h5 >
+                            <span class="material-symbols-outlined coin" id="coin-card4">
+                                monetization_on
+                            </span> 
+                            <span id="price4">
+                                867
+                            </span>
+                        </h5>
+                    </div>
+                </div>
+                <div class="buy">
+                    <button onclick="buyCard(4)">
+                        Comprar
+                        <span class="material-symbols-outlined sell-icon">
+                            sell
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <button class="refresh" onclick="newRefresh()">
+            <span class="material-symbols-outlined sync-icon">
+                sync
+            </span>
+        </button>
+        <div class="item-buyed" id="item-buyed">
+            <p>
+                Item comprado
+            </p>
+        </div>
+    </div>
+
+
+    <script type="text/javascript" src="./styleScript/vanilla-tilt.js"></script>
+    <script src="scripts/main.js"></script>
+</html>
